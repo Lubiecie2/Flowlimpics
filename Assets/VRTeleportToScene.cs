@@ -36,18 +36,15 @@ public class VRTeleportToScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // SprawdŸ czy to XR Origin (g³ówny obiekt gracza VR)
         if (other.CompareTag("Player") || other.GetComponentInParent<XROrigin>() != null)
         {
             playerOnPlatform = true;
 
-            // Podœwietl platformê
             if (highlightMaterial != null && objectRenderer != null)
             {
                 objectRenderer.material = highlightMaterial;
             }
 
-            // Aktywuj efekt
             if (teleportEffect != null)
             {
                 teleportEffect.SetActive(true);
@@ -55,7 +52,6 @@ public class VRTeleportToScene : MonoBehaviour
 
             Debug.Log("Gracz wszed³ na platformê teleportacji");
 
-            // Rozpocznij automatyczn¹ teleportacjê
             teleportCoroutine = StartCoroutine(AutoTeleport());
         }
     }
@@ -66,13 +62,11 @@ public class VRTeleportToScene : MonoBehaviour
         {
             playerOnPlatform = false;
 
-            // Anuluj teleportacjê jeœli gracz zszed³
             if (teleportCoroutine != null)
             {
                 StopCoroutine(teleportCoroutine);
             }
 
-            // Przywróæ oryginalny materia³
             if (originalMaterial != null && objectRenderer != null)
             {
                 objectRenderer.material = originalMaterial;
