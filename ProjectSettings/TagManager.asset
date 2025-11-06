@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TeleportPlatform
   - Arrow
+  - Enemy
   layers:
   - Default
   - TransparentFX
