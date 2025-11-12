@@ -102,6 +102,12 @@ public class Arrow : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log($"Hit enemy for {_damage} damage!");
+
+            TargetHit target = collision.gameObject.GetComponent<TargetHit>();
+            if (target != null)
+            {
+                target.OnArrowHit(_damage);
+            }
         }
 
         Destroy(gameObject, _stickTime);

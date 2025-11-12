@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 5476356641934709735}
   - component: {fileID: 8698997722272464293}
   - component: {fileID: 7339415926682300689}
+  - component: {fileID: 4656451523355388940}
   m_Layer: 0
   m_Name: arrow
   m_TagString: Untagged
@@ -297,7 +298,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.25309, y: -0, z: 0.24043}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5305133014644689093}
@@ -375,7 +376,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5080571478204485955}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -477,6 +478,24 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &4656451523355388940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080571478204485955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d618ac940645b2849824e2b49fa15770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrowTrail
+  _trailWidth: 0.05
+  _maxPoints: 120
+  _pointSpacing: 0.05
+  _fadeTime: 1.5
+  _startColor: {r: 0, g: 1, b: 1, a: 0.2901961}
+  _endColor: {r: 0, g: 1, b: 1, a: 0}
 --- !u!1 &8094480275025236758
 GameObject:
   m_ObjectHideFlags: 0

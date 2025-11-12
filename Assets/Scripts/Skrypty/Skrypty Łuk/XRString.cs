@@ -24,6 +24,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Interactables
         [SerializeField] private Transform _arrowSpawnPoint;
         [SerializeField] private float _minLaunchForce = 1f;
         [SerializeField] private float _maxLaunchForce = 5f;
+        [SerializeField] private AudioClip _launchSound; 
 
         public float pullAmount { get; private set; } = 0.0f;
 
@@ -95,13 +96,20 @@ namespace UnityEngine.XR.Interaction.Toolkit.Interactables
 
         private void LaunchArrow()
         {
+            if (_launchSound != null)
+            {
+                AudioSource audioSource = GetComponent<AudioSource>();
+                if (audioSource != null)
+                {
+                    audioSource.PlayOneShot(_launchSound);
+                }
+            }
             _currentArrow.transform.SetParent(null);
 
             Vector3 launchDirection = (_startPoint.position - _endPoint.position).normalized;
             float launchForce = Mathf.Lerp(_minLaunchForce, _maxLaunchForce, pullAmount);
             Vector3 launchVelocity = launchDirection * launchForce;
 
-            // Ignoruj kolizje z łukiem przy wystrzale
             Collider arrowCollider = _currentArrow.GetComponent<Collider>();
             Collider[] bowColliders = GetComponentsInChildren<Collider>();
 
