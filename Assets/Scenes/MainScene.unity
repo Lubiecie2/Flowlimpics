@@ -14025,6 +14025,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 8.98
       objectReference: {fileID: 0}
+    - target: {fileID: 6668107523934003546, guid: 47ccacb9ccb3c1e4d9d3e7270dd98f68, type: 3}
+      propertyPath: targetSceneName
+      value: CourseFlow
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6494410457066831409, guid: 47ccacb9ccb3c1e4d9d3e7270dd98f68, type: 3}
     m_RemovedGameObjects: []
