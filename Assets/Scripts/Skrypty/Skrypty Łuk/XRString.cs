@@ -24,7 +24,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Interactables
         [SerializeField] private Transform _arrowSpawnPoint;
         [SerializeField] private float _minLaunchForce = 1f;
         [SerializeField] private float _maxLaunchForce = 5f;
-        [SerializeField] private AudioClip _launchSound; 
+        [SerializeField] private AudioClip _launchSound;
 
         public float pullAmount { get; private set; } = 0.0f;
 

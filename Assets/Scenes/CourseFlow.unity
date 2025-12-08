@@ -21617,7 +21617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingTarget
   _visibleTime: 2
-  _hiddenTime: 2
+  _hiddenTime: 1
   _startVisible: 1
 --- !u!114 &2118505910
 MonoBehaviour:
