@@ -23,7 +23,7 @@ public class PortalMovement : MonoBehaviour
     {
         startPosition = transform.position;
 
-        // Dodaj œwiat³o
+        // Dodaj œwiat³o asdasdas
         GameObject lightObj = new GameObject("PortalLight");
         lightObj.transform.SetParent(transform);
         lightObj.transform.localPosition = Vector3.zero;
