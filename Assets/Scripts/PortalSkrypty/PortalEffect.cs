@@ -7,7 +7,7 @@ public class PortalMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 1f;
 
     [Header("Œwiat³o")]
-    [SerializeField] private Color lightColor = new Color(1f, 0.3f, 0f); // Pomarañczowy
+    [SerializeField] private Color lightColor = new Color(1f, 0.3f, 0f); 
     [SerializeField] private float lightIntensity = 3f;
     [SerializeField] private float lightRange = 8f;
 
@@ -23,7 +23,6 @@ public class PortalMovement : MonoBehaviour
     {
         startPosition = transform.position;
 
-        // Dodaj œwiat³o asdasdas
         GameObject lightObj = new GameObject("PortalLight");
         lightObj.transform.SetParent(transform);
         lightObj.transform.localPosition = Vector3.zero;
@@ -34,12 +33,11 @@ public class PortalMovement : MonoBehaviour
         portalLight.intensity = lightIntensity;
         portalLight.range = lightRange;
 
-        // Dodaj dŸwiêk
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = portalSound;
         audioSource.volume = volume;
         audioSource.loop = true;
-        audioSource.spatialBlend = 1f; // 3D sound
+        audioSource.spatialBlend = 1f; 
         audioSource.maxDistance = 15f;
 
         if (portalSound != null)
@@ -50,7 +48,6 @@ public class PortalMovement : MonoBehaviour
 
     void Update()
     {
-        // Ruch góra-dó³
         float offset = Mathf.Sin(Time.time * moveSpeed) * moveDistance;
         transform.position = startPosition + new Vector3(0, offset, 0);
     }
