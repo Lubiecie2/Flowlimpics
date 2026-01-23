@@ -10,9 +10,9 @@ public class SignEffects : MonoBehaviour
 
     [Header("Śledzenie Gracza")]
     [SerializeField] private bool sledzGracza = true;
-    [SerializeField] private string tagGracza = "MainCamera"; // lub "Player"
+    [SerializeField] private string tagGracza = "MainCamera"; 
     [SerializeField] private float predkoscObracania = 5f;
-    [SerializeField] private bool blokowanieTylu = true; // Zapobiega odwracaniu tyłem
+    [SerializeField] private bool blokowanieTylu = true; 
 
     [Header("Intensywność")]
     [Range(0.5f, 3f)]
